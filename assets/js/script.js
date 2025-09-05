@@ -692,78 +692,189 @@ morango: [
 
 }
 
-let categoriaAtual = "";
-let indiceAtual = 0;
 
-function abrirModal(categoria, indice = 0) {
-  categoriaAtual = categoria;
-  indiceAtual = indice;
-  atualizarModal();
-  const modal = document.getElementById("modalProduto");
-  if (modal) modal.style.display = "flex";
-}
 
-function fecharModal() {
-  const modal = document.getElementById("modalProduto");
-  if (modal) modal.style.display = "none";
-}
 
-function atualizarModal() {
-  const produto = produtos[categoriaAtual]?.[indiceAtual];
-  if (!produto) return;
 
-  document.getElementById("modalTitulo").innerText = produto.titulo;
-  document.getElementById("modalDescricao").innerText = produto.descricao;
-  document.getElementById("modalImagem").src = produto.imagem;
-
-  const container = document.querySelector(".impact-characters");
-  if (!container) return;
-
-  container.innerHTML = "";
-  produto.impactCharacters?.forEach(c => {
-    const div = document.createElement("div");
-    div.className = "character";
-    div.innerHTML = `<i class="bi ${c.icon}"></i><span>${c.texto}</span>`;
-    container.appendChild(div);
-  });
-}
-
-function proximoProduto() {
-  if (!produtos[categoriaAtual]) return;
-  indiceAtual = (indiceAtual + 1) % produtos[categoriaAtual].length;
-  atualizarModal();
-}
-
-function anteriorProduto() {
-  if (!produtos[categoriaAtual]) return;
-  indiceAtual = (indiceAtual - 1 + produtos[categoriaAtual].length) % produtos[categoriaAtual].length;
-  atualizarModal();
-}
-
-/* CONFIG, PARA POUP-UP DE UMA FOTO  */
-
-function atualizarModal() {
-  const produto = produtos[categoriaAtual]?.[indiceAtual];
-  if (!produto) return;
-
-  document.getElementById("modalTitulo").innerText = produto.titulo;
-  document.getElementById("modalDescricao").innerText = produto.descricao;
-  document.getElementById("modalImagem").src = produto.imagem;
-
-  // Renderiza os impact characters
-  const container = document.querySelector(".impact-characters");
-  if (!container) return;
-  container.innerHTML = "";
-  produto.impactCharacters?.forEach(c => {
-    const div = document.createElement("div");
-    div.className = "character";
-    div.innerHTML = `<i class="bi ${c.icon}"></i><span>${c.texto}</span>`;
-    container.appendChild(div);
-  });
-
-  // Oculta ou exibe os botões Anterior/Próximo
-  const botoes = document.querySelector(".modal-botoes");
-  if (botoes) {
-    botoes.style.display = produtos[categoriaAtual]?.length > 1 ? "flex" : "none";
+(function () {
+  // --- Helpers e referências DOM ---
+  const modal = document.getElementById('modalProduto');
+  if (!modal) {
+    console.warn('[MODAL] #modalProduto não encontrado no DOM.');
+    return;
   }
-}
+  const modalContent = modal.querySelector('.modal-conteudo');
+  const modalTitle = modal.querySelector('#modalTitulo');
+  const modalDesc = modal.querySelector('#modalDescricao');
+  const modalImg = modal.querySelector('#modalImagem');
+  const impactContainer = modal.querySelector('.impact-characters');
+  const botoesWrapper = modal.querySelector('.modal-botoes');
+  const btns = botoesWrapper ? botoesWrapper.querySelectorAll('button') : [];
+  const btnPrev = btns[0] || null;
+  const btnNext = btns[1] || null;
+
+  // Usa o objeto produtos já existente (se houver). Se não, não quebra: usa {}
+  const produtosData = window.produtos || window.produtosData || {};
+
+  let categoriaAtual = null;
+  let indiceAtual = 0;
+
+  // Tenta extrair "categoria" a partir do atributo onclick: abrirModal('categoria', index)
+  function extrairCategoriaDeOnclick(onclick) {
+    if (!onclick || typeof onclick !== 'string') return null;
+    const m = onclick.match(/abrirModal\s*\(\s*['"]([^'"]+)['"]\s*(?:,\s*(\d+)\s*)?\)/i);
+    if (m) return { categoria: m[1], indice: m[2] ? parseInt(m[2], 10) : 0 };
+    return null;
+  }
+
+  // --- Funções principais ---
+  function abrir(categoria, indice = 0) {
+    if (!categoria) return console.warn('[MODAL] categoria inválida passada para abrir().');
+    const cat = String(categoria);
+    const idx = Number.isFinite(indice) ? indice : 0;
+
+    if (!produtosData[cat] || !produtosData[cat][idx]) {
+      console.warn(`[MODAL] Produto não encontrado: categoria="${cat}", indice=${idx}`);
+      return;
+    }
+
+    categoriaAtual = cat;
+    indiceAtual = idx;
+    atualizar();
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    // Bloqueia scroll do body enquanto modal aberto
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function fechar() {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+  }
+
+  function atualizar() {
+    const produto = produtosData[categoriaAtual]?.[indiceAtual];
+    if (!produto) return console.warn('[MODAL] atualizar() sem produto válido.');
+
+    if (modalTitle) modalTitle.innerText = produto.titulo || '';
+    if (modalDesc) modalDesc.innerText = produto.descricao || '';
+    if (modalImg) modalImg.src = produto.imagem || '';
+
+    if (impactContainer) {
+      impactContainer.innerHTML = '';
+      (produto.impactCharacters || []).forEach(c => {
+        const div = document.createElement('div');
+        div.className = 'character';
+        div.innerHTML = `<i class="bi ${c.icon}"></i><span>${c.texto}</span>`;
+        impactContainer.appendChild(div);
+      });
+    }
+
+    if (botoesWrapper) {
+      const total = (produtosData[categoriaAtual] || []).length || 0;
+      botoesWrapper.style.display = total > 1 ? 'flex' : 'none';
+    }
+  }
+
+  function proximo() {
+    const arr = produtosData[categoriaAtual];
+    if (!arr || !arr.length) return;
+    indiceAtual = (indiceAtual + 1) % arr.length;
+    atualizar();
+  }
+
+  function anterior() {
+    const arr = produtosData[categoriaAtual];
+    if (!arr || !arr.length) return;
+    indiceAtual = (indiceAtual - 1 + arr.length) % arr.length;
+    atualizar();
+  }
+
+  // --- Interações (clicks/teclado) ---
+  // Clique fora do conteúdo fecha
+  modal.addEventListener('click', (e) => {
+    if (!modalContent) return;
+    if (!modalContent.contains(e.target)) fechar();
+  });
+
+  // ESC fecha
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') fechar();
+  });
+
+  // Botões Prev/Next (se existirem)
+  if (btnPrev) btnPrev.addEventListener('click', anterior);
+  if (btnNext) btnNext.addEventListener('click', proximo);
+
+  // Fechar botão com classe .modal-fechar (se houver)
+  const closeBtn = modal.querySelector('.modal-fechar');
+  if (closeBtn) closeBtn.addEventListener('click', fechar);
+
+  // --- Detecta botões nos cards automaticamente e anexa listeners ---
+  // Procura .produto-card e tenta inferir categoria:
+  function attachButtonsFromCards() {
+    const cards = document.querySelectorAll('.produto-card');
+    cards.forEach(card => {
+      // prefere botão com data-categoria
+      const btn = card.querySelector('button');
+      if (!btn) return;
+
+      // Já anexado?
+      if (btn.dataset._modalAttached === '1') return;
+
+      let categoria = btn.dataset.categoria || btn.getAttribute('data-categoria');
+      let indice = btn.dataset.index ? parseInt(btn.dataset.index, 10) : 0;
+
+      if (!categoria) {
+        // tenta extrair do onclick (compatível com seu HTML atual)
+        const onclick = btn.getAttribute('onclick') || '';
+        const parsed = extrairCategoriaDeOnclick(onclick);
+        if (parsed) {
+          categoria = parsed.categoria;
+          indice = parsed.indice;
+        }
+      }
+
+      if (!categoria) {
+        // se ainda não achou, procura em um atributo do card (fallback)
+        const possible = card.querySelector('.produto-titulo');
+        if (possible && possible.innerText) {
+          // fallback fraco: usa texto do título em lower-case sem espaços (apenas para ajudar)
+          categoria = possible.innerText.trim().toLowerCase().replace(/\s+/g, '-');
+        }
+      }
+
+      if (!categoria) {
+        console.warn('[MODAL] Não encontrei categoria para um botão de produto — adicione data-categoria ou onclick.');
+        return;
+      }
+
+      // marca e adiciona listener
+      btn.dataset._modalAttached = '1';
+      btn.addEventListener('click', (ev) => {
+        ev.preventDefault();
+        abrir(categoria, indice || 0);
+      });
+    });
+  }
+
+  // executa attach no carregamento e também após um pequeno tempo (caso elementos sejam adicionados dinamicamente)
+  document.addEventListener('DOMContentLoaded', attachButtonsFromCards);
+  // attach imediato (caso o script esteja no final do body)
+  attachButtonsFromCards();
+  // re-attach uma vez após 500ms para garantir
+  setTimeout(attachButtonsFromCards, 500);
+
+  // --- Expõe uma função global compatível com os onclick existentes ---
+  window.abrirModal = function (categoria, indice = 0) {
+    abrir(categoria, indice);
+  };
+  window.fecharModal = function () { fechar(); };
+  window.anteriorProduto = function () { anterior(); };
+  window.proximoProduto = function () { proximo(); };
+
+  console.info('[MODAL] inicializado. Produtos disponíveis:', Object.keys(produtosData));
+})();
