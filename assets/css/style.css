@@ -509,6 +509,7 @@ h4 {
   gap: 4rem;
 }
 
+
 .produtos-card {
   display: flex;
   flex-direction: row;
@@ -567,10 +568,7 @@ h4 {
   font-family: var(--fonte-escrita);
 }
 
-.card-lista :hover {
-  color: var(--cor-hover);
-  transition: all 0.3s ease-in-out;
-}
+
 
 .card-item i {
   font-size: 1.1rem;
@@ -974,6 +972,7 @@ h4 {
 
 input.error {
   border: 1px solid red;
+  font-family: var(--fonte-escrita);
 }
 
 
@@ -1233,7 +1232,9 @@ body.dark .form-alert.error {
   font-family: var(--fonte-titulos2);
   margin-bottom: 0.5rem;
   color: var(--cor-texto);
+  text-transform: capitalize;
 }
+
 
 .produto-texto {
   font-size: 1rem;
@@ -1284,6 +1285,8 @@ body.dark .form-alert.error {
   justify-content: center;
 }
 
+
+/* VOLTAR AQUI */
 .modal-imagem img {
   max-width: 100%;
   border-radius: 1rem;
@@ -1384,6 +1387,19 @@ body.dark .form-alert.error {
   margin-bottom: 2rem;
   /* aumenta o respiro antes dos impact */
 
+}
+
+.modal-progresso {
+  position: absolute;
+  top: 10px;        /* distância do topo */
+  left: 15px;       /* distância da esquerda */
+  background: rgba(0, 0, 0, 0.6); /* fundo levemente escuro */
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 1000;    /* garante que fique acima dos outros elementos */
+  user-select: none; /* evita seleção do texto */
 }
 
 /* Impact Characters em branco e centralizados */
@@ -1487,6 +1503,35 @@ body.dark .form-alert.error {
   color: white;
 }
 
+/* IMAGEM */
+
+.img-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.img-fullscreen img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 8px;
+  cursor: zoom-out;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
 
 
 /* botão fechar */
@@ -1513,9 +1558,7 @@ body.dark .form-alert.error {
 }
 
 
-/* PÁGINA SOBRE  */
 
-/* PÁGINA SOBRE */
 
 
 
