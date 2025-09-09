@@ -1013,6 +1013,7 @@ body.dark .form-alert.error {
 
 .footer-container i {
   padding-left: .5rem;
+  color: white;
 }
 
 .btn-footer {
@@ -1049,7 +1050,7 @@ body.dark .form-alert.error {
 
 .pedro:hover i,
 .pedro i {
-  color: var(--cor-texto);
+  color: white;
 }
 
 .frutamina {
@@ -1227,6 +1228,22 @@ body.dark .form-alert.error {
 
 }
 
+.produto-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.selo-rei {
+  position: absolute;
+  bottom: -5px;   /* distância da borda inferior */
+  right: -16px;    /* distância da borda direita */
+  width: 60px;   /* tamanho do selo */
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
 .produto-titulo {
   font-size: 1.5rem;
   font-family: var(--fonte-titulos2);
@@ -1388,6 +1405,14 @@ body.dark .form-alert.error {
   /* aumenta o respiro antes dos impact */
 
 }
+
+/* SELO  */
+.selo-rei-icon {
+  width: 3.5rem;   /* mesmo tamanho do ícone normal */
+  height: auto;
+  vertical-align: middle;
+}
+
 
 .modal-progresso {
   position: absolute;

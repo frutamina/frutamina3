@@ -15,7 +15,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-emoji-smile", texto: "Sabor doce" },
                 { icon: "bi-brightness-high", texto: "Alta durabilidade" },
-                { icon: "bi-award", texto: "Linha premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -29,7 +29,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-emoji-smile", texto: "Sabor suave" },
                 { icon: "bi-sun", texto: "Cultivo especial" },
-                { icon: "bi-award", texto: "Linha premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -43,7 +43,7 @@ const produtosData = {
             "impactCharacters": [
                 { "icon": "bi-emoji-smile", "texto": "Sabor refrescante" },
                 { "icon": "bi-droplet", "texto": "Textura suculenta" },
-                { "icon": "bi-award", "texto": "Linha premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -57,7 +57,7 @@ const produtosData = {
             "impactCharacters": [
                 { "icon": "bi-emoji-smile", "texto": "Sabor intenso" },
                 { "icon": "bi-sun", "texto": "Cultivo selecionado" },
-                { "icon": "bi-award", "texto": "Qualidade superior" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -71,7 +71,7 @@ const produtosData = {
             "impactCharacters": [
                 { "icon": "bi-emoji-smile", "texto": "Sabor sofisticado" },
                 { "icon": "bi-brightness-high", "texto": "Boa durabilidade" },
-                { "icon": "bi-award", "texto": "Linha premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -85,7 +85,7 @@ const produtosData = {
             "impactCharacters": [
                 { "icon": "bi-emoji-smile", "texto": "Sabor marcante" },
                 { "icon": "bi-sun", "texto": "Cultivo especial" },
-                { "icon": "bi-award", "texto": "Qualidade premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -99,7 +99,7 @@ const produtosData = {
             "impactCharacters": [
                 { "icon": "bi-emoji-smile", "texto": "Sabor doce" },
                 { "icon": "bi-droplet", "texto": "Muito suculento" },
-                { "icon": "bi-award", "texto": "Premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -113,7 +113,7 @@ const produtosData = {
             "impactCharacters": [
                 { "icon": "bi-emoji-smile", "texto": "Sabor delicado" },
                 { "icon": "bi-sun", "texto": "Cultivo controlado" },
-                { "icon": "bi-award", "texto": "Qualidade superior" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -127,7 +127,7 @@ const produtosData = {
             "impactCharacters": [
                 { "icon": "bi-emoji-smile", "texto": "Sabor marcante" },
                 { "icon": "bi-droplet", "texto": "Textura cremosa" },
-                { "icon": "bi-award", "texto": "Linha premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -141,7 +141,7 @@ const produtosData = {
             "impactCharacters": [
                 { "icon": "bi-emoji-smile", "texto": "Sabor tropical" },
                 { "icon": "bi-sun", "texto": "Cultivo especial" },
-                { "icon": "bi-award", "texto": "Qualidade premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
 
@@ -156,7 +156,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-droplet", texto: "Extremamente suculenta" },
                 { icon: "bi-emoji-laughing", texto: "Sabor marcante" },
-                { icon: "bi-award", texto: "Seleção premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -170,7 +170,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-droplet-half", texto: "Frescor garantido" },
                 { icon: "bi-heart", texto: "Fonte natural de hidratação" },
-                { icon: "bi-award", texto: "Linha premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -184,7 +184,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-droplet-half", texto: "Frescor garantido" },
                 { icon: "bi-heart", texto: "Fonte natural de hidratação" },
-                { icon: "bi-award", texto: "Linha premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
 
@@ -199,7 +199,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-brightness-high", texto: "Cor vibrante" },
                 { icon: "bi-emoji-heart-eyes", texto: "Sabor suave" },
-                { icon: "bi-box-seam", texto: "Categoria especial" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -213,7 +213,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-fire", texto: "Sabor intenso" },
                 { icon: "bi-star", texto: "Fonte de antioxidantes" },
-                { icon: "bi-award", texto: "Selecionado premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -227,7 +227,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-palette", texto: "Cor diferenciada" },
                 { icon: "bi-emoji-smile", texto: "Sabor equilibrado" },
-                { icon: "bi-check-circle", texto: "Alta qualidade" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
 
@@ -242,7 +242,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-lightning", texto: "Praticidade no consumo" },
                 { icon: "bi-heart", texto: "100% natural" },
-                { icon: "bi-box-seam", texto: "Embalagem segura" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -256,7 +256,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-award", texto: "Sabor premium" },
                 { icon: "bi-shield-check", texto: "Qualidade garantida" },
-                { icon: "bi-recycle", texto: "Embalagem sustentável" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         }
     ],
@@ -272,7 +272,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-droplet", texto: "Extremamente suculenta" },
                 { icon: "bi-emoji-laughing", texto: "Sabor marcante" },
-                { icon: "bi-award", texto: "Seleção premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -286,7 +286,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-droplet-half", texto: "Frescor garantido" },
                 { icon: "bi-heart", texto: "Fonte natural de hidratação" },
-                { icon: "bi-award", texto: "Linha premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -300,7 +300,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-droplet-half", texto: "Frescor garantido" },
                 { icon: "bi-heart", texto: "Fonte natural de hidratação" },
-                { icon: "bi-award", texto: "Linha premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         }
     ],
@@ -402,7 +402,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-brightness-high", texto: "Cor vibrante" },
                 { icon: "bi-emoji-heart-eyes", texto: "Sabor suave" },
-                { icon: "bi-box-seam", texto: "Categoria especial" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -416,7 +416,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-fire", texto: "Sabor intenso" },
                 { icon: "bi-star", texto: "Fonte de antioxidantes" },
-                { icon: "bi-award", texto: "Selecionado premium" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -430,7 +430,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-palette", texto: "Cor diferenciada" },
                 { icon: "bi-emoji-smile", texto: "Sabor equilibrado" },
-                { icon: "bi-check-circle", texto: "Alta qualidade" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         }
     ],
@@ -446,7 +446,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-lightning", texto: "Praticidade no consumo" },
                 { icon: "bi-heart", texto: "100% natural" },
-                { icon: "bi-box-seam", texto: "Embalagem segura" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         },
         {
@@ -460,7 +460,7 @@ const produtosData = {
             impactCharacters: [
                 { icon: "bi-award", texto: "Sabor premium" },
                 { icon: "bi-shield-check", texto: "Qualidade garantida" },
-                { icon: "bi-recycle", texto: "Embalagem sustentável" }
+                { img: "assets/img/logo-rei.png", texto: "Família Itaueira" }
             ]
         }
     ],
@@ -648,134 +648,134 @@ const produtosData = {
         }
     ],
     nespera: [
-  {
-    titulo: "Nêspera Tradicional",
-    descricao: "Fruta de polpa macia, doce e levemente ácida. Ideal para consumo in natura, sobremesas e compotas.",
-    imagem: "assets/img/produtos/nespera1.jpg",
-    galeria: [
-      "assets/img/produtos/nespera1.jpg",
-      "assets/img/produtos/nespera1.jpg"
+        {
+            titulo: "Nêspera Tradicional",
+            descricao: "Fruta de polpa macia, doce e levemente ácida. Ideal para consumo in natura, sobremesas e compotas.",
+            imagem: "assets/img/produtos/nespera1.jpg",
+            galeria: [
+                "assets/img/produtos/nespera1.jpg",
+                "assets/img/produtos/nespera1.jpg"
+            ],
+            impactCharacters: [
+                { icon: "bi-emoji-smile", texto: "Doce e suculenta" },
+                { icon: "bi-apple", texto: "Textura macia" },
+                { icon: "bi-basket", texto: "Mesa premium" }
+            ]
+        },
     ],
-    impactCharacters: [
-      { icon: "bi-emoji-smile", texto: "Doce e suculenta" },
-      { icon: "bi-apple", texto: "Textura macia" },
-      { icon: "bi-basket", texto: "Mesa premium" }
-    ]
-  },
-],
-maracuja: [
-  {
-    titulo: "Maracujá Granadilha",
-    descricao: "Fruta de polpa aromática, sabor equilibrado entre doce e ácido. Ideal para sucos, sobremesas e uso culinário em geral.",
-    imagem: "assets/img/produtos/maracuja1.jpg",
-    galeria: [
-      "assets/img/produtos/maracuja1.jpg",
-      "assets/img/produtos/maracuja1.jpg"
+    maracuja: [
+        {
+            titulo: "Maracujá Granadilha",
+            descricao: "Fruta de polpa aromática, sabor equilibrado entre doce e ácido. Ideal para sucos, sobremesas e uso culinário em geral.",
+            imagem: "assets/img/produtos/maracuja1.jpg",
+            galeria: [
+                "assets/img/produtos/maracuja1.jpg",
+                "assets/img/produtos/maracuja1.jpg"
+            ],
+            impactCharacters: [
+                { icon: "bi-emoji-smile", texto: "Polpa aromática" },
+                { icon: "bi-cup-straw", texto: "Perfeito para sucos" },
+                { icon: "bi-basket", texto: "Mesa premium" }
+            ]
+        }
     ],
-    impactCharacters: [
-      { icon: "bi-emoji-smile", texto: "Polpa aromática" },
-      { icon: "bi-cup-straw", texto: "Perfeito para sucos" },
-      { icon: "bi-basket", texto: "Mesa premium" }
-    ]
-  }
-],
-mirtilo: [
-  {
-    titulo: "Mirtilo Clássico",
-    descricao: "Fruta pequena, sabor doce e levemente ácido, com coloração azul intensa. Ideal para consumo in natura, saladas e sobremesas.",
-    imagem: "assets/img/produtos/mirtilo.jpg",
-    galeria: [
-      "assets/img/produtos/mirtilo1.jpg",
-      "assets/img/produtos/mirtilo1.jpg"
+    mirtilo: [
+        {
+            titulo: "Mirtilo Clássico",
+            descricao: "Fruta pequena, sabor doce e levemente ácido, com coloração azul intensa. Ideal para consumo in natura, saladas e sobremesas.",
+            imagem: "assets/img/produtos/mirtilo.jpg",
+            galeria: [
+                "assets/img/produtos/mirtilo1.jpg",
+                "assets/img/produtos/mirtilo1.jpg"
+            ],
+            impactCharacters: [
+                { icon: "bi-emoji-smile", texto: "Doce e suculento" },
+                { icon: "bi-palette", texto: "Cor intensa" },
+                { icon: "bi-basket", texto: "Mesa premium" }
+            ]
+        }
     ],
-    impactCharacters: [
-      { icon: "bi-emoji-smile", texto: "Doce e suculento" },
-      { icon: "bi-palette", texto: "Cor intensa" },
-      { icon: "bi-basket", texto: "Mesa premium" }
-    ]
-  }
-],
-pitaya: [
-  {
-    titulo: "Pitaya Vermelha",
-    descricao: "Fruta exótica de polpa suculenta e sabor levemente adocicado. Ideal para consumo in natura, sucos e sobremesas decorativas.",
-    imagem: "assets/img/produtos/pitaya.jpg",
-    galeria: [
-      "assets/img/produtos/pitaya1.jpg",
-      "assets/img/produtos/pitaya1.jpg"
+    pitaya: [
+        {
+            titulo: "Pitaya Vermelha",
+            descricao: "Fruta exótica de polpa suculenta e sabor levemente adocicado. Ideal para consumo in natura, sucos e sobremesas decorativas.",
+            imagem: "assets/img/produtos/pitaya.jpg",
+            galeria: [
+                "assets/img/produtos/pitaya1.jpg",
+                "assets/img/produtos/pitaya1.jpg"
+            ],
+            impactCharacters: [
+                { icon: "bi-emoji-smile", texto: "Doce e refrescante" },
+                { icon: "bi-palette", texto: "Cor vibrante" },
+                { icon: "bi-basket", texto: "Mesa premium" }
+            ]
+        }
     ],
-    impactCharacters: [
-      { icon: "bi-emoji-smile", texto: "Doce e refrescante" },
-      { icon: "bi-palette", texto: "Cor vibrante" },
-      { icon: "bi-basket", texto: "Mesa premium" }
-    ]
-  }
-],
-cupuacu: [
-  {
-    titulo: "Cupuaçu Tradicional",
-    descricao: "Fruta de polpa cremosa, sabor adocicado e aroma marcante. Ideal para sucos, sobremesas e produtos gourmet.",
-    imagem: "assets/img/produtos/cupuacu.jpg",
-    galeria: [
-      "assets/img/produtos/cupuacu.jpg",
-      "assets/img/produtos/cupuaci1.jpg"
+    cupuacu: [
+        {
+            titulo: "Cupuaçu Tradicional",
+            descricao: "Fruta de polpa cremosa, sabor adocicado e aroma marcante. Ideal para sucos, sobremesas e produtos gourmet.",
+            imagem: "assets/img/produtos/cupuacu.jpg",
+            galeria: [
+                "assets/img/produtos/cupuacu.jpg",
+                "assets/img/produtos/cupuaci1.jpg"
+            ],
+            impactCharacters: [
+                { icon: "bi-emoji-smile", texto: "Polpa cremosa" },
+                { icon: "bi-cup-straw", texto: "Ótimo para sucos e sobremesas" },
+                { icon: "bi-basket", texto: "Mesa premium" }
+            ]
+        }
     ],
-    impactCharacters: [
-      { icon: "bi-emoji-smile", texto: "Polpa cremosa" },
-      { icon: "bi-cup-straw", texto: "Ótimo para sucos e sobremesas" },
-      { icon: "bi-basket", texto: "Mesa premium" }
-    ]
-  }
-],
-graviola: [
-  {
-    titulo: "Graviola Tradicional",
-    descricao: "Fruta de polpa macia e suculenta, sabor doce com toque ácido. Ideal para sucos, sobremesas e consumo in natura.",
-    imagem: "assets/img/produtos/graviola.jpg",
-    galeria: [
-      "assets/img/produtos/graviola.jpg",
-      "assets/img/produtos/graviola1.jpg"
+    graviola: [
+        {
+            titulo: "Graviola Tradicional",
+            descricao: "Fruta de polpa macia e suculenta, sabor doce com toque ácido. Ideal para sucos, sobremesas e consumo in natura.",
+            imagem: "assets/img/produtos/graviola.jpg",
+            galeria: [
+                "assets/img/produtos/graviola.jpg",
+                "assets/img/produtos/graviola1.jpg"
+            ],
+            impactCharacters: [
+                { icon: "bi-emoji-smile", texto: "Doce e suculenta" },
+                { icon: "bi-cup-straw", texto: "Perfeita para sucos" },
+                { icon: "bi-basket", texto: "Mesa premium" }
+            ]
+        }
     ],
-    impactCharacters: [
-      { icon: "bi-emoji-smile", texto: "Doce e suculenta" },
-      { icon: "bi-cup-straw", texto: "Perfeita para sucos" },
-      { icon: "bi-basket", texto: "Mesa premium" }
-    ]
-  }
-],
-cacau: [
-  {
-    titulo: "Cacau Tradicional",
-    descricao: "Fruta de polpa macia e sementes ricas em sabor. Ideal para produção de chocolate, sucos e doces artesanais.",
-    imagem: "assets/img/produtos/cacau.jpg",
-    galeria: [
-      "assets/img/produtos/cacau1.jpg",
-      "assets/img/produtos/cacau1.jpg"
+    cacau: [
+        {
+            titulo: "Cacau Tradicional",
+            descricao: "Fruta de polpa macia e sementes ricas em sabor. Ideal para produção de chocolate, sucos e doces artesanais.",
+            imagem: "assets/img/produtos/cacau.jpg",
+            galeria: [
+                "assets/img/produtos/cacau1.jpg",
+                "assets/img/produtos/cacau1.jpg"
+            ],
+            impactCharacters: [
+                { icon: "bi-emoji-smile", texto: "Polpa saborosa" },
+                { icon: "bi-cup-straw", texto: "Perfeito para doces e chocolates" },
+                { icon: "bi-basket", texto: "Mesa premium" }
+            ]
+        }
     ],
-    impactCharacters: [
-      { icon: "bi-emoji-smile", texto: "Polpa saborosa" },
-      { icon: "bi-cup-straw", texto: "Perfeito para doces e chocolates" },
-      { icon: "bi-basket", texto: "Mesa premium" }
-    ]
-  }
-],
-caju: [
-  {
-    titulo: "Caju Tradicional",
-    descricao: "Fruta de polpa suculenta e sabor levemente ácido, rica em vitamina C. Ideal para consumo in natura, sucos e doces.",
-    imagem: "assets/img/produtos/caju.jpg",
-    galeria: [
-      "assets/img/produtos/caju1.jpg",
-      "assets/img/produtos/caju1.jpg"
+    caju: [
+        {
+            titulo: "Caju Tradicional",
+            descricao: "Fruta de polpa suculenta e sabor levemente ácido, rica em vitamina C. Ideal para consumo in natura, sucos e doces.",
+            imagem: "assets/img/produtos/caju.jpg",
+            galeria: [
+                "assets/img/produtos/caju1.jpg",
+                "assets/img/produtos/caju1.jpg"
+            ],
+            impactCharacters: [
+                { icon: "bi-emoji-smile", texto: "Doce e suculento" },
+                { icon: "bi-cup-straw", texto: "Perfeito para sucos" },
+                { icon: "bi-basket", texto: "Mesa premium" }
+            ]
+        }
     ],
-    impactCharacters: [
-      { icon: "bi-emoji-smile", texto: "Doce e suculento" },
-      { icon: "bi-cup-straw", texto: "Perfeito para sucos" },
-      { icon: "bi-basket", texto: "Mesa premium" }
-    ]
-  }
-],
-    
+
 };
 
 // ===== VARIÁVEIS DE NAVEGAÇÃO =====
@@ -818,14 +818,20 @@ function abrirModal(categoria, indice = 0) {
         descricao.textContent = produto.descricao;
         imagem.src = produto.imagem;
 
-        // Impact characters
+        // NOVO (aceita icon OU img)
         impactContainer.innerHTML = '';
-        produto.impactCharacters.forEach(char => {
+        produto.impactCharacters.forEach((char) => {
             const div = document.createElement('div');
             div.className = 'character';
-            div.innerHTML = `<i class="bi ${char.icon}"></i><span>${char.texto}</span>`;
+
+            const iconHtml = char.img
+                ? `<img src="${char.img}" alt="Selo Rei" class="selo-rei-icon">`
+                : `<i class="bi ${char.icon}"></i>`;
+
+            div.innerHTML = `${iconHtml}<span>${char.texto}</span>`;
             impactContainer.appendChild(div);
         });
+
 
         // Atualiza progresso
         document.getElementById('progressoTexto').textContent = `${indice + 1}/${produtos.length}`;

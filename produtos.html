@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 </head>
+
 <body>
   <!-- Header -->
   <header id="header">
@@ -78,7 +80,7 @@
   <main class="produtos-page container">
     <h1>Nossos Produtos</h1>
     <p class="descricao">Frutas frescas e selecionadas, direto do campo para o seu negócio.</p>
-    
+
     <!-- Barra de Pesquisa -->
     <div class="barra-pesquisa">
       <input type="text" id="pesquisaProduto" placeholder="Pesquisar produto..." onkeyup="filtrarProdutos()">
@@ -101,7 +103,10 @@
     <div class="grid-produtos">
       <!-- Card Produto -->
       <article class="produto-card">
+        <div class="produto-img-wrapper">
         <img src="assets/img/produtos/am-rei.jpg" alt="Melancias" class="produto-img">
+        <img src="assets/img/logo-rei.png" alt="Selo Rei" class="selo-rei">
+        </div>
         <h3 class="produto-titulo">Familia Itaueira</h3>
         <p class="produto-texto">Produtos premium da linha itaueira.</p>
         <button class="btn btn-primario" onclick="abrirModal('itaueira')">
@@ -131,7 +136,10 @@
       </article>
 
       <article class="produto-card">
-        <img src="assets/img/produtos/pamarelo.jpg" alt="pimentao-amarelo" class="produto-img">
+        <div class="produto-img-wrapper">
+          <img src="assets/img/produtos/pamarelo.jpg" alt="pimentao-amarelo" class="produto-img">
+          <img src="assets/img/logo-rei.png" alt="Selo Rei" class="selo-rei">
+        </div>
         <h3 class="produto-titulo">Pimentões</h3>
         <p class="produto-texto">3 Variedades: vermelho, amarelo e laranja. Com a melhor qualidade do mercado</p>
         <button class="btn btn-primario" onclick="abrirModal('pimentao')">
@@ -141,14 +149,18 @@
       </article>
 
       <article class="produto-card">
-        <img src="assets/img/produtos/melv.jpg" alt="mel" class="produto-img">
-        <h3 class="produto-titulo">Mel</h3>
+        <div class="produto-img-wrapper">
+          <img src="assets/img/produtos/mel.jpg" alt="mel" class="produto-img">
+          <img src="assets/img/logo-rei.png" alt="Selo Rei" class="selo-rei">
+        </div>
+        <h3 class="produto-titulo">Mel Rei</h3>
         <p class="produto-texto">Em parceria com a itaueira, temos mel na embalagem de 275g e 500g</p>
         <button class="btn btn-primario" onclick="abrirModal('mel')">
           <span class="btn-texto">Ver mais</span>
           <i class="bi bi-search"></i>
         </button>
       </article>
+
 
       <article class="produto-card">
         <img src="assets/img/produtos/uva1.jpg" alt="Uvas" class="produto-img">
@@ -169,7 +181,7 @@
           <i class="bi bi-search"></i>
         </button>
       </article>
-      
+
       <article class="produto-card">
         <img src="assets/img/produtos/keitt.jpg" alt="Manga" class="produto-img">
         <h3 class="produto-titulo">Mangas</h3>
@@ -179,7 +191,7 @@
           <i class="bi bi-search"></i>
         </button>
       </article>
-      
+
       <article class="produto-card">
         <img src="assets/img/produtos/morango.jpg" alt="morango" class="produto-img">
         <h3 class="produto-titulo">Morangos</h3>
@@ -279,6 +291,15 @@
           <i class="bi bi-search"></i>
         </button>
       </article>
+      <article class="produto-card">
+        <img src="assets/img/produtos/amora.jpg" alt="amora" class="produto-img">
+        <h3 class="produto-titulo">caju</h3>
+        <p class="produto-texto">Sabor tropical para o seu negócio.</p>
+        <button class="btn btn-primario" onclick="abrirModal('amora')">
+          <span class="btn-texto">Ver mais</span>
+          <i class="bi bi-search"></i>
+        </button>
+      </article>
     </div>
 
     <!-- Modal Produto -->
@@ -335,4 +356,5 @@
   <script src="assets/js/script.js"></script>
   <script src="assets/js/modal-produtos.js"></script>
 </body>
+
 </html>
